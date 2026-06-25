@@ -1,0 +1,15 @@
+h2{
+    color: #2D4A3E;
+}
+.list-group{
+    width: 70%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+@media(max-width:600px){
+    .list-group{
+        width: 100%;
+    }
+}

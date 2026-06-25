@@ -1,0 +1,87 @@
+header {
+  background-color: #2D4A3E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  flex-wrap: wrap; /*  permet à la nav de passer en dessous sur mobile */
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: #E9B824;
+}
+
+/* Burger : caché par défaut sur desktop */
+.burger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*  Nav desktop */
+nav {
+  display: flex;
+  gap: 40px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+  color: #E9B824;
+  transition: color 0.3s ease;
+}
+
+/* ── Tablette (600px :900px) ── */
+@media (min-width: 601px) and (max-width: 900px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+}
+
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  /* Burger visible sur mobile */
+  .burger {
+    display: block;
+  }
+
+  /* La nav prend toute la largeur et passe en colonne */
+  nav {
+    flex-direction: column;
+    width: 100%;           /* occupe tout le header en largeur */
+    gap: 15px;
+    padding: 15px 0;
+    align-items: flex-start;
+  }
+
+  nav a {
+    padding: 3px 0;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,15 @@
+<header>
+  <div class="logo">Le Calao<span> Doré</span></div>
+    <!-- bouton burger visible uniquement sur mobile -->
+  <button class="burger" (click)="toggleMenu()">☰</button>
+     <!-- Navbar :visible par defaut sur desktop, conditionnelle sur mobile -->
+  @if (isMenuOpen || !isMobile) {
+    <nav>
+      @for (link of links; track link) {
+        <a [class.active]="activeLink === link" (click)="setActive(link)">
+          {{ link }}
+        </a>
+      }
+    </nav>
+  }
+</header>
